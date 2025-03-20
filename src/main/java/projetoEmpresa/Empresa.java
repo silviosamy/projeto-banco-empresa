@@ -7,6 +7,15 @@ public class Empresa {
     private String nome;
     private List<Funcionario> listFuncionarios;
 
+    public Empresa() {
+
+    }
+
+    @Override
+    public String toString() {
+        return "\nNome Empresa :" + nome;
+    }
+
     public Empresa(String nome, List<Funcionario> listFuncionarios) {
         this.nome = nome;
         this.listFuncionarios = listFuncionarios;

@@ -1,13 +1,32 @@
 package projetoEmpresa;
 
+import java.util.List;
+
 public class Funcionario {
 
     private String nome;
-    private Banco banco;
+    private List<Carro> listCarros;
 
-    public Funcionario(String nome, Banco banco) {
+    @Override
+    public String toString() {
+        return nome;
+    }
+
+    public Funcionario() {
+
+    }
+
+    public Funcionario(String nome) {
         this.nome = nome;
-        this.banco = banco;
+        this.listCarros = listCarros;
+    }
+
+    public List<Carro> getListCarros() {
+        return listCarros;
+    }
+
+    public void setListCarros(List<Carro> listCarros) {
+        this.listCarros = listCarros;
     }
 
     public String getNome() {
@@ -16,5 +35,13 @@ public class Funcionario {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public List<Carro> getCarros() {
+        return listCarros;
+    }
+
+    public void setCarros(List<Carro> listCarros) {
+        this.listCarros = listCarros;
     }
 }
