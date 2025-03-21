@@ -1,5 +1,6 @@
 package projetoEmpresa;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Funcionario {
@@ -12,13 +13,9 @@ public class Funcionario {
         return nome;
     }
 
-    public Funcionario() {
-
-    }
-
     public Funcionario(String nome) {
         this.nome = nome;
-        this.listCarros = listCarros;
+        this.listCarros = new ArrayList<>();
     }
 
     public List<Carro> getListCarros() {
@@ -43,5 +40,10 @@ public class Funcionario {
 
     public void setCarros(List<Carro> listCarros) {
         this.listCarros = listCarros;
+    }
+
+    public void adicionarCarro(Carro carro) {
+        this.listCarros.add(carro);
+
     }
 }
