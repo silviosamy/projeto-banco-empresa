@@ -10,20 +10,15 @@ public class MainTeste {
         List<Empresa> listEmpresas = new ArrayList<>();
         List<Funcionario> listFuncionarios1 = new ArrayList<>();
         List<Funcionario> listFuncionarios2 = new ArrayList<>();
-        List<Carro> listCarros = new ArrayList<>();
 
-        //Instanciar os carros, criando os modelos
+        //Criar os carros
         Carro carro1 = new Carro("Peugeot");
         Carro carro2 = new Carro("Marea");
         Carro carro3 = new Carro("Kombi");
         Carro carro4 = new Carro("Porsche");
         Carro carro5 = new Carro("Opala");
-        listCarros.add(carro1);
-        listCarros.add(carro2);
-        listCarros.add(carro3);
-        listCarros.add(carro4);
-        listCarros.add(carro5);
 
+        //Criar funcionários e adicionar na lista respectivamente
         Funcionario funcionario1 = new Funcionario("João");
         Funcionario funcionario2 = new Funcionario("André");
         Funcionario funcionario3 = new Funcionario("Maria");
@@ -31,6 +26,7 @@ public class MainTeste {
         listFuncionarios1.add(funcionario2);
         listFuncionarios2.add(funcionario3);
 
+        //definir
         funcionario1.adicionarCarro(carro1);
         funcionario1.adicionarCarro(carro2);
         funcionario2.adicionarCarro(carro3);
@@ -42,6 +38,7 @@ public class MainTeste {
         Empresa empresa2 = new Empresa("Samsung", listFuncionarios2);
         empresa1.setListFuncionarios(listFuncionarios1);
         empresa2.setListFuncionarios(listFuncionarios2);
+        //Adicionar na lista de empresas, as empresas instanciadas.
         listEmpresas.add(empresa1);
         listEmpresas.add(empresa2);
 
