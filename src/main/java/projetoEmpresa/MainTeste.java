@@ -6,11 +6,13 @@ import java.util.List;
 public class MainTeste {
     public static void main(String[] args) {
 
+        // Criar listas para manipular no exercício.
         List<Empresa> listEmpresas = new ArrayList<>();
         List<Funcionario> listFuncionarios1 = new ArrayList<>();
         List<Funcionario> listFuncionarios2 = new ArrayList<>();
         List<Carro> listCarros = new ArrayList<>();
 
+        //Instanciar os carros, criando os modelos
         Carro carro1 = new Carro("Peugeot");
         Carro carro2 = new Carro("Marea");
         Carro carro3 = new Carro("Kombi");
@@ -35,6 +37,7 @@ public class MainTeste {
         funcionario2.adicionarCarro(carro4);
         funcionario3.adicionarCarro(carro5);
 
+        //Criar empresa e listar os funcionários nas respectivas empresas.
         Empresa empresa1 = new Empresa("Nubank", listFuncionarios1);
         Empresa empresa2 = new Empresa("Samsung", listFuncionarios2);
         empresa1.setListFuncionarios(listFuncionarios1);
@@ -42,6 +45,8 @@ public class MainTeste {
         listEmpresas.add(empresa1);
         listEmpresas.add(empresa2);
 
+        //Percorrer as listas e imprimir os valores conforme a proposta do exercício:
+        //Existem Empresas, e cada mpresa tem funcionários, cada funcionário tem um carro.
         for (Empresa empresa : listEmpresas) {
             System.out.println("\nEmpresa: " + empresa.getNome());
             for (Funcionario funcionario : empresa.getListFuncionarios()) {
@@ -53,6 +58,5 @@ public class MainTeste {
             }
         }
     }
-
 }
 
